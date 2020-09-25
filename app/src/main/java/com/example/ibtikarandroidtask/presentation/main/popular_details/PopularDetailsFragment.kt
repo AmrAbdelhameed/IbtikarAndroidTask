@@ -18,7 +18,7 @@ import javax.inject.Inject
 
 class PopularDetailsFragment :
     BaseFragment<FragmentPopularDetailsBinding, PopularDetailsViewModel>(),
-    ImageItemViewModel.ImageItemViewModelListener {
+    ImageItemViewModelListener {
     @Inject
     lateinit var factory: ViewModelProviderFactory
     private var popularDetailsViewModel: PopularDetailsViewModel? = null
@@ -94,7 +94,7 @@ class PopularDetailsFragment :
         }
     }
 
-    override fun onItemClick(item: ImagesDataItem) {
+    override fun onItemClick(item: ImageDataItem) {
         showImage(item.imageUrl)
     }
 

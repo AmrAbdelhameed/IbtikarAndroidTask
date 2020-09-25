@@ -6,8 +6,12 @@
     <data>
 
         <variable
-            name="viewModel"
-            type="com.example.ibtikarandroidtask.presentation.main.popular_details.ImageItemViewModel" />
+            name="imageDataItem"
+            type="com.example.ibtikarandroidtask.presentation.main.popular_details.ImageDataItem" />
+
+        <variable
+            name="item"
+            type="com.example.ibtikarandroidtask.presentation.main.popular_details.ImageItemView" />
     </data>
 
     <RelativeLayout
@@ -21,7 +25,7 @@
             android:layout_marginRight="8dp"
             android:layout_marginBottom="8dp"
             android:background="@color/white"
-            android:onClick="@{() -> viewModel.onItemClick()}"
+            android:onClick="@{() -> item.onItemClick()}"
             app:cardCornerRadius="4dp"
             app:cardElevation="4dp">
 
@@ -30,7 +34,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="150dp"
                 android:scaleType="fitXY"
-                app:imageUrl="@{viewModel.imageUrl}"
+                app:imageUrl="@{imageDataItem.imageUrl}"
                 tools:ignore="ContentDescription" />
         </androidx.cardview.widget.CardView>
     </RelativeLayout>

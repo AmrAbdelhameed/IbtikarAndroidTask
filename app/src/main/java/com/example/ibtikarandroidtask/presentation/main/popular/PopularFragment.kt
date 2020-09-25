@@ -15,7 +15,6 @@ import com.example.ibtikarandroidtask.databinding.FragmentPopularBinding
 import com.example.ibtikarandroidtask.presentation.base.BaseFragment
 import com.example.ibtikarandroidtask.presentation.base.NavigationCommand
 import com.example.ibtikarandroidtask.presentation.main.MainActivity
-import com.example.ibtikarandroidtask.presentation.main.popular.PopularItemViewModel.PopularItemViewModelListener
 import com.example.ibtikarandroidtask.utils.OnLoadMoreListener
 import com.example.ibtikarandroidtask.utils.RecyclerViewLoadMoreScroll
 import javax.inject.Inject

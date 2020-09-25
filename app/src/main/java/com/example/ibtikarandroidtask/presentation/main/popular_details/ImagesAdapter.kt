@@ -3,14 +3,14 @@ package com.example.ibtikarandroidtask.presentation.main.popular_details
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import com.example.ibtikarandroidtask.databinding.ItemImageViewBinding
+import com.example.ibtikarandroidtask.presentation.base.BaseItemListener
 import com.example.ibtikarandroidtask.presentation.base.BaseRecyclerViewAdapter
 import com.example.ibtikarandroidtask.presentation.base.BaseViewHolder
-import com.example.ibtikarandroidtask.presentation.main.popular_details.ImageItemViewModel.ImageItemViewModelListener
 
 class ImagesAdapter(
-    items: MutableList<ImagesDataItem>,
-    listener: ImageItemViewModelListener
-) : BaseRecyclerViewAdapter<ImagesDataItem>(items, listener) {
+    items: MutableList<ImageDataItem>,
+    itemListener: ImageItemViewModelListener
+) : BaseRecyclerViewAdapter<ImageDataItem>(items, itemListener) {
 
     override fun getItemCount(): Int {
         return items.size
@@ -28,9 +28,14 @@ class ImagesAdapter(
     inner class ImagesViewHolder(private val mBinding: ItemImageViewBinding) :
         BaseViewHolder(mBinding.root) {
         override fun onBind(position: Int) {
-            val popular = items[position]
-            mBinding.viewModel = ImageItemViewModel(popular) { itemListener.onItemClick(popular) }
+            val imageDataItem = items[position]
+            mBinding.imageDataItem = imageDataItem
+            mBinding.item = ImageItemView { itemListener.onItemClick(imageDataItem) }
             mBinding.executePendingBindings()
         }
     }
+}
+
+interface ImageItemViewModelListener : BaseItemListener<ImageDataItem> {
+    override fun onRetryClick() {}
 }

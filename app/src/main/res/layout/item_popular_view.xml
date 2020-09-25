@@ -6,8 +6,12 @@
     <data>
 
         <variable
-            name="viewModel"
-            type="com.example.ibtikarandroidtask.presentation.main.popular.PopularItemViewModel" />
+            name="popularDataItem"
+            type="com.example.ibtikarandroidtask.presentation.main.popular.PopularDataItem" />
+
+        <variable
+            name="item"
+            type="com.example.ibtikarandroidtask.presentation.main.popular.PopularItemView" />
     </data>
 
     <RelativeLayout
@@ -19,7 +23,7 @@
             android:layout_height="wrap_content"
             android:layout_margin="8dp"
             android:background="@color/white"
-            android:onClick="@{() -> viewModel.onItemClick()}"
+            android:onClick="@{() -> item.onItemClick()}"
             app:cardCornerRadius="4dp"
             app:cardElevation="4dp">
 
@@ -33,7 +37,7 @@
                     android:layout_width="75dp"
                     android:layout_height="75dp"
                     android:scaleType="centerCrop"
-                    app:imageUrlCrop="@{viewModel.imageUrl}"
+                    app:imageUrlCrop="@{popularDataItem.imageUrl}"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent"
@@ -55,7 +59,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:maxLines="1"
-                        android:text="@{viewModel.name}"
+                        android:text="@{popularDataItem.name}"
                         android:textColor="@color/black"
                         android:textSize="14sp"
                         android:textStyle="bold" />
@@ -65,7 +69,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:maxLines="1"
-                        android:text="@{viewModel.knownForDepartment}"
+                        android:text="@{popularDataItem.knownForDepartment}"
                         android:textColor="@color/gray"
                         android:textSize="12sp"
                         android:textStyle="bold" />

@@ -7,8 +7,8 @@ import androidx.recyclerview.widget.DefaultItemAnimator
 import com.example.ibtikarandroidtask.BR
 import com.example.ibtikarandroidtask.R
 import com.example.ibtikarandroidtask.ViewModelProviderFactory
-import com.example.ibtikarandroidtask.domain.dto.db.Popular
 import com.example.ibtikarandroidtask.databinding.FragmentFavoritesBinding
+import com.example.ibtikarandroidtask.domain.dto.db.Popular
 import com.example.ibtikarandroidtask.presentation.base.BaseFragment
 import com.example.ibtikarandroidtask.presentation.base.NavigationCommand
 import com.example.ibtikarandroidtask.presentation.main.MainActivity
@@ -18,7 +18,7 @@ import javax.inject.Inject
 
 class FavoritesFragment :
     BaseFragment<FragmentFavoritesBinding, FavoritesViewModel>(),
-    FavoritesItemViewModel.FavoritesItemViewModelListener {
+    FavoritesItemViewModelListener {
     @Inject
     lateinit var factory: ViewModelProviderFactory
     private lateinit var favoritesAdapter: FavoritesAdapter
@@ -43,7 +43,7 @@ class FavoritesFragment :
             NavigationCommand.To(
                 PopularFragmentDirections.toPopularDetailsFragment(
                     PopularDataItem(
-                        item.id, item.name, item.knownForDepartment, item.profilePath
+                        item.id, item.name, item.knownForDepartment, item.imageUrl
                     )
                 )
             )

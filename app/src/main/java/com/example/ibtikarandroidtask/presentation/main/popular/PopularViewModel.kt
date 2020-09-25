@@ -3,9 +3,9 @@ package com.example.ibtikarandroidtask.presentation.main.popular
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.viewModelScope
+import com.example.ibtikarandroidtask.data.PopularDataSource
 import com.example.ibtikarandroidtask.domain.dto.Result
 import com.example.ibtikarandroidtask.domain.dto.api.PopularResponse
-import com.example.ibtikarandroidtask.data.PopularDataSource
 import com.example.ibtikarandroidtask.presentation.base.BaseViewModel
 import kotlinx.coroutines.launch
 
@@ -40,13 +40,13 @@ class PopularViewModel(
 
     val popularListLiveData: LiveData<List<PopularDataItem>> = popularLiveData
 
-    private fun mapPopularDataItem(popular: List<com.example.ibtikarandroidtask.domain.dto.api.Result>) {
-        popularLiveData.value = popular.map {
+    private fun mapPopularDataItem(result: List<com.example.ibtikarandroidtask.domain.dto.api.Result>) {
+        popularLiveData.value = result.map {
             PopularDataItem(
                 it.id,
                 it.name,
                 it.knownForDepartment,
-                it.profilePath
+                it.imageUrl
             )
         }
     }

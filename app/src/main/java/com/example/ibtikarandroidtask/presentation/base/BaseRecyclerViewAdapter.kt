@@ -1,6 +1,7 @@
 package com.example.ibtikarandroidtask.presentation.base
 
 import androidx.recyclerview.widget.RecyclerView
+import com.example.ibtikarandroidtask.utils.AppConstants
 
 abstract class BaseRecyclerViewAdapter<T>(
     val items: MutableList<T>,
@@ -19,4 +20,11 @@ abstract class BaseRecyclerViewAdapter<T>(
         items.clear()
     }
 
+    override fun getItemCount(): Int {
+        return if (items.size > 0) items.size else 1
+    }
+
+    override fun getItemViewType(position: Int): Int {
+        return if (items.isNotEmpty()) AppConstants.VIEW_TYPE_NORMAL else AppConstants.VIEW_TYPE_EMPTY
+    }
 }

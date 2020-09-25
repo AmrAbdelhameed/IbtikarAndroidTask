@@ -96,7 +96,7 @@
                     android:id="@+id/imagesRecyclerView"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    app:adapter="@{viewModel.imagesListLiveData}"
+                    app:adapter="@{viewModel.imageListLiveData}"
                     app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
                     app:spanCount="2"
                     tools:listitem="@layout/item_image_view" />

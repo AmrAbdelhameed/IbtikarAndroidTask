@@ -16,7 +16,7 @@ class PopularDetailsViewModel(
     private val popularDetailsDataSource: PopularDetailsDataSource
 ) : BaseViewModel() {
     private val isFavorite: MutableLiveData<Boolean> = MutableLiveData()
-    private val imagesLiveData: MutableLiveData<List<ImagesDataItem>> = MutableLiveData()
+    private val imageLiveData: MutableLiveData<List<ImageDataItem>> = MutableLiveData()
 
     private fun insertPopular(popularDataItem: PopularDataItem) {
         viewModelScope.launch {
@@ -25,7 +25,7 @@ class PopularDetailsViewModel(
                     popularDataItem.id,
                     popularDataItem.name,
                     popularDataItem.knownForDepartment,
-                    popularDataItem.profilePath
+                    popularDataItem.imageUrl
                 )
             )
             isFavorite.value = true
@@ -39,7 +39,7 @@ class PopularDetailsViewModel(
                     popularDataItem.id,
                     popularDataItem.name,
                     popularDataItem.knownForDepartment,
-                    popularDataItem.profilePath
+                    popularDataItem.imageUrl
                 )
             )
             isFavorite.value = false
@@ -86,11 +86,11 @@ class PopularDetailsViewModel(
         }
     }
 
-    val imagesListLiveData: LiveData<List<ImagesDataItem>> = imagesLiveData
+    val imageListLiveData: LiveData<List<ImageDataItem>> = imageLiveData
 
     private fun mapImagesDataItem(popular: List<Profile>) {
-        imagesLiveData.value = popular.map {
-            ImagesDataItem(
+        imageLiveData.value = popular.map {
+            ImageDataItem(
                 it.filePath
             )
         }
