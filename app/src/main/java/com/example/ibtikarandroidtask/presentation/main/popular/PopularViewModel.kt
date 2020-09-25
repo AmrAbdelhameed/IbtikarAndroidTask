@@ -12,8 +12,7 @@ import kotlinx.coroutines.launch
 class PopularViewModel(
     private val popularDataSource: PopularDataSource
 ) : BaseViewModel() {
-    private val results: MutableList<com.example.ibtikarandroidtask.domain.dto.api.Result> =
-        arrayListOf()
+    private val results: MutableList<com.example.ibtikarandroidtask.domain.dto.api.Result> = arrayListOf()
     private val popularLiveData: MutableLiveData<List<PopularDataItem>> = MutableLiveData()
     var page: Int = 1
 

@@ -6,9 +6,8 @@ import com.example.ibtikarandroidtask.domain.dto.api.ImagesResponse
 import com.example.ibtikarandroidtask.domain.dto.db.Popular
 
 interface PopularDetailsDataSource {
-    suspend fun getImages(personId: Int): Result<ImagesResponse>
     suspend fun insert(popular: Popular)
     suspend fun delete(popular: Popular)
     suspend fun getFavoriteById(id: Int): Result<Popular>
-    fun getAllFavorites(): LiveData<List<Popular>>
+    suspend fun getImages(personId: Int): Result<ImagesResponse>
 }
