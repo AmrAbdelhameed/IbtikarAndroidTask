@@ -7,7 +7,7 @@
 
         <variable
             name="viewModel"
-            type="com.example.ibtikarandroidtask.ui.main.favorites.FavoritesEmptyItemViewModel" />
+            type="com.example.ibtikarandroidtask.presentation.main.favorites.FavoritesEmptyItemViewModel" />
     </data>
 
     <LinearLayout

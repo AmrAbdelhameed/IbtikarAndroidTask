@@ -7,7 +7,7 @@
 
         <variable
             name="viewModel"
-            type="com.example.ibtikarandroidtask.ui.main.popular.PopularItemViewModel" />
+            type="com.example.ibtikarandroidtask.presentation.main.popular.PopularItemViewModel" />
     </data>
 
     <RelativeLayout

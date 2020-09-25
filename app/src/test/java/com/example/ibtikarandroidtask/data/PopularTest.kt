@@ -1,6 +1,6 @@
 package com.example.ibtikarandroidtask.data
 
-import com.example.ibtikarandroidtask.data.model.api.Result
+import com.example.ibtikarandroidtask.domain.dto.api.Result
 import com.example.ibtikarandroidtask.utils.TestUtils
 import org.hamcrest.CoreMatchers.`is`
 import org.junit.Assert

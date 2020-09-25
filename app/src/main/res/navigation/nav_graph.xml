@@ -6,7 +6,7 @@
     app:startDestination="@id/popularFragment">
     <fragment
         android:id="@+id/popularFragment"
-        android:name="com.example.ibtikarandroidtask.ui.main.popular.PopularFragment"
+        android:name="com.example.ibtikarandroidtask.presentation.main.popular.PopularFragment"
         android:label="fragment_popular"
         tools:layout="@layout/fragment_popular">
         <action
@@ -20,17 +20,17 @@
 
     <fragment
         android:id="@+id/popularDetailsFragment"
-        android:name="com.example.ibtikarandroidtask.ui.main.popular_details.PopularDetailsFragment"
+        android:name="com.example.ibtikarandroidtask.presentation.main.popular_details.PopularDetailsFragment"
         android:label="fragment_popular_details"
         tools:layout="@layout/fragment_popular_details">
         <argument
             android:name="popular"
-            app:argType="com.example.ibtikarandroidtask.ui.main.popular.PopularDataItem" />
+            app:argType="com.example.ibtikarandroidtask.presentation.main.popular.PopularDataItem" />
     </fragment>
 
     <fragment
         android:id="@+id/favoritesFragment"
-        android:name="com.example.ibtikarandroidtask.ui.main.favorites.FavoritesFragment"
+        android:name="com.example.ibtikarandroidtask.presentation.main.favorites.FavoritesFragment"
         android:label="fragment_favorites"
         tools:layout="@layout/fragment_favorites">
 

@@ -1,3 +1,0 @@
-package com.example.ibtikarandroidtask.ui.main.favorites
-
-class FavoritesEmptyItemViewModel

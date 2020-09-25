@@ -9,14 +9,8 @@ import androidx.test.espresso.matcher.ViewMatchers
 import androidx.test.espresso.matcher.ViewMatchers.withId
 import androidx.test.ext.junit.runners.AndroidJUnit4
 import androidx.test.filters.MediumTest
-import com.example.ibtikarandroidtask.data.FakeAppDataManager
-import com.example.ibtikarandroidtask.data.local.db.FakeDbRepository
-import com.example.ibtikarandroidtask.data.local.prefs.FakePreferenceRepository
-import com.example.ibtikarandroidtask.data.model.api.ImagesResponse
-import com.example.ibtikarandroidtask.data.model.api.PopularResponse
-import com.example.ibtikarandroidtask.data.remote.FakeApiRepository
-import com.example.ibtikarandroidtask.ui.main.popular.PopularFragment
-import com.example.ibtikarandroidtask.ui.main.popular.PopularViewModel
+import com.example.ibtikarandroidtask.domain.dto.api.PopularResponse
+import com.example.ibtikarandroidtask.presentation.main.popular.PopularFragment
 import org.junit.Before
 import org.junit.Test
 import org.junit.runner.RunWith
@@ -32,24 +26,12 @@ class PopularListFragmentTest {
     @Before
     fun before() {
         appContext = ApplicationProvider.getApplicationContext()
-
-        val popularDataSource = FakeAppDataManager(
-            FakeApiRepository(
-                createPopularTestData(), ImagesResponse()
-            ),
-            FakeDbRepository(),
-            FakePreferenceRepository()
-        )
-
-        val popularViewModel = PopularViewModel(
-            appContext, popularDataSource
-        )
     }
 
     private fun createPopularTestData(): PopularResponse {
-        val list = ArrayList<com.example.ibtikarandroidtask.data.model.api.Result>()
+        val list = ArrayList<com.example.ibtikarandroidtask.domain.dto.api.Result>()
         list.add(
-            com.example.ibtikarandroidtask.data.model.api.Result(
+            com.example.ibtikarandroidtask.domain.dto.api.Result(
                 122503,
                 "Liu Yifei",
                 "Acting",
@@ -57,7 +39,7 @@ class PopularListFragmentTest {
             )
         )
         list.add(
-            com.example.ibtikarandroidtask.data.model.api.Result(
+            com.example.ibtikarandroidtask.domain.dto.api.Result(
                 990393,
                 "Erin Moriarty",
                 "Acting",
@@ -65,7 +47,7 @@ class PopularListFragmentTest {
             )
         )
         list.add(
-            com.example.ibtikarandroidtask.data.model.api.Result(
+            com.example.ibtikarandroidtask.domain.dto.api.Result(
                 287,
                 "Brad Pitt",
                 "Acting",

@@ -2,14 +2,17 @@ package com.example.ibtikarandroidtask.di.module
 
 import android.app.Application
 import android.content.Context
-import android.content.SharedPreferences
 import androidx.room.Room
 import com.example.ibtikarandroidtask.BuildConfig
-import com.example.ibtikarandroidtask.data.AppDataManager
-import com.example.ibtikarandroidtask.data.AppDataSource
-import com.example.ibtikarandroidtask.data.local.db.AppDatabase
-import com.example.ibtikarandroidtask.data.remote.network.ApiService
+import com.example.ibtikarandroidtask.data.PopularDataSource
+import com.example.ibtikarandroidtask.data.PopularDetailsDataSource
+import com.example.ibtikarandroidtask.data.PopularFavoritesDataSource
+import com.example.ibtikarandroidtask.data.local.AppDatabase
+import com.example.ibtikarandroidtask.data.remote.ApiService
 import com.example.ibtikarandroidtask.di.ApiInfo
+import com.example.ibtikarandroidtask.domain.repository.PopularDetailsRepository
+import com.example.ibtikarandroidtask.domain.repository.PopularFavoritesRepository
+import com.example.ibtikarandroidtask.domain.repository.PopularRepository
 import com.example.ibtikarandroidtask.utils.AppConstants
 import com.jakewharton.retrofit2.adapter.kotlin.coroutines.CoroutineCallAdapterFactory
 import dagger.Module
@@ -24,12 +27,6 @@ class AppModule {
     @Singleton
     fun provideContext(application: Application): Context {
         return application
-    }
-
-    @Provides
-    @Singleton
-    fun provideAppDataSource(appDataManager: AppDataManager): AppDataSource {
-        return appDataManager
     }
 
     @Provides
@@ -62,9 +59,22 @@ class AppModule {
             .build()
     }
 
+
     @Provides
     @Singleton
-    fun provideSharedPreferences(context: Context): SharedPreferences {
-        return context.getSharedPreferences(AppConstants.PREF_NAME, Context.MODE_PRIVATE)
+    fun providePopularDataSource(popularRepository: PopularRepository): PopularDataSource {
+        return popularRepository
+    }
+
+    @Provides
+    @Singleton
+    fun providePopularDetailsDataSource(popularDetailsRepository: PopularDetailsRepository): PopularDetailsDataSource {
+        return popularDetailsRepository
+    }
+
+    @Provides
+    @Singleton
+    fun providePopularFavoritesDataSource(popularFavoritesRepository: PopularFavoritesRepository): PopularFavoritesDataSource {
+        return popularFavoritesRepository
     }
 }

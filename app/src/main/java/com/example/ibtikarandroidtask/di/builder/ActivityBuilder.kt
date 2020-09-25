@@ -1,9 +1,9 @@
 package com.example.ibtikarandroidtask.di.builder
 
-import com.example.ibtikarandroidtask.ui.main.MainActivity
-import com.example.ibtikarandroidtask.ui.main.popular.PopularFragmentProvider
-import com.example.ibtikarandroidtask.ui.main.popular_details.PopularDetailsFragmentProvider
-import com.example.ibtikarandroidtask.ui.main.favorites.FavoritesFragmentProvider
+import com.example.ibtikarandroidtask.presentation.main.MainActivity
+import com.example.ibtikarandroidtask.presentation.main.favorites.FavoritesFragmentProvider
+import com.example.ibtikarandroidtask.presentation.main.popular.PopularFragmentProvider
+import com.example.ibtikarandroidtask.presentation.main.popular_details.PopularDetailsFragmentProvider
 import dagger.Module
 import dagger.android.ContributesAndroidInjector
 

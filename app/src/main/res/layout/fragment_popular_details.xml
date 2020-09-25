@@ -7,11 +7,11 @@
 
         <variable
             name="popular"
-            type="com.example.ibtikarandroidtask.ui.main.popular.PopularDataItem" />
+            type="com.example.ibtikarandroidtask.presentation.main.popular.PopularDataItem" />
 
         <variable
             name="viewModel"
-            type="com.example.ibtikarandroidtask.ui.main.popular_details.PopularDetailsViewModel" />
+            type="com.example.ibtikarandroidtask.presentation.main.popular_details.PopularDetailsViewModel" />
     </data>
 
     <RelativeLayout
@@ -29,7 +29,7 @@
                 android:layout_height="wrap_content"
                 android:background="@color/white"
                 android:orientation="vertical"
-                tools:context=".ui.main.popular_details.PopularDetailsFragment">
+                tools:context=".presentation.main.popular_details.PopularDetailsFragment">
 
                 <androidx.constraintlayout.widget.ConstraintLayout
                     android:layout_width="match_parent"
