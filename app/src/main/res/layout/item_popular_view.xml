@@ -7,11 +7,11 @@
 
         <variable
             name="popularDataItem"
-            type="com.example.ibtikarandroidtask.presentation.main.popular.PopularDataItem" />
+            type="com.example.popularpeople.presentation.main.popular.PopularDataItem" />
 
         <variable
             name="item"
-            type="com.example.ibtikarandroidtask.presentation.main.popular.PopularItemView" />
+            type="com.example.popularpeople.presentation.main.popular.PopularItemView" />
     </data>
 
     <RelativeLayout

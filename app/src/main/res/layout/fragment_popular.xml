@@ -9,7 +9,7 @@
 
         <variable
             name="viewModel"
-            type="com.example.ibtikarandroidtask.presentation.main.popular.PopularViewModel" />
+            type="com.example.popularpeople.presentation.main.popular.PopularViewModel" />
 
     </data>
 

@@ -7,7 +7,7 @@
 
         <variable
             name="item"
-            type="com.example.ibtikarandroidtask.presentation.main.popular.PopularEmptyItemView" />
+            type="com.example.popularpeople.presentation.main.popular.PopularEmptyItemView" />
     </data>
 
     <LinearLayout

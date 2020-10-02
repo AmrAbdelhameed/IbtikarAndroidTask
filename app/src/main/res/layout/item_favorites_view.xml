@@ -7,11 +7,11 @@
 
         <variable
             name="popular"
-            type="com.example.ibtikarandroidtask.domain.dto.db.Popular" />
+            type="com.example.popularpeople.domain.dto.db.Popular" />
 
         <variable
             name="item"
-            type="com.example.ibtikarandroidtask.presentation.main.favorites.FavoritesItemView" />
+            type="com.example.popularpeople.presentation.main.favorites.FavoritesItemView" />
     </data>
 
     <RelativeLayout

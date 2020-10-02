@@ -7,11 +7,11 @@
 
         <variable
             name="imageDataItem"
-            type="com.example.ibtikarandroidtask.presentation.main.popular_details.ImageDataItem" />
+            type="com.example.popularpeople.presentation.main.popular_details.ImageDataItem" />
 
         <variable
             name="item"
-            type="com.example.ibtikarandroidtask.presentation.main.popular_details.ImageItemView" />
+            type="com.example.popularpeople.presentation.main.popular_details.ImageItemView" />
     </data>
 
     <RelativeLayout
