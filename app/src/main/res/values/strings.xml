@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">PopularPeople</string>
+    <string name="app_name">Popular People</string>
     <string name="favorites">Favorites</string>
     <string name="save">Save</string>
     <string name="saved">Saved!</string>

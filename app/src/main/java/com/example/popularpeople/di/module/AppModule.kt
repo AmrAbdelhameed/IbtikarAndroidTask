@@ -59,7 +59,6 @@ class AppModule {
             .build()
     }
 
-
     @Provides
     @Singleton
     fun providePopularDataSource(popularRepository: PopularRepository): PopularDataSource {
